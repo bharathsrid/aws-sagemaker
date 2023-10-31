@@ -18,7 +18,7 @@ IDLE_TIME=3600
 LONG_RUNNING_CHECK_FILE_PATH = "/tmp/longrunning"
 
 echo "Fetching the autostop script"
-wget https://raw.githubusercontent.com/aws-samples/amazon-sagemaker-notebook-instance-lifecycle-config-samples/master/scripts/auto-stop-idle/autostop.py
+wget https://raw.githubusercontent.com/bharathsrid/aws-sagemaker/main/auto-stop-idle/autostop.py
 
 
 echo "Detecting Python install with boto3 install"
