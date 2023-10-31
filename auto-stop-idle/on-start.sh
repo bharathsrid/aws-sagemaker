@@ -15,7 +15,7 @@ set -ex
 
 # PARAMETERS
 IDLE_TIME=3600
-LONG_RUNNING_CHECK_FILE_PATH = "/tmp/longrunning"
+LONG_RUNNING_CHECK_FILE_PATH="/tmp/longrunning"
 
 echo "Fetching the autostop script"
 wget https://raw.githubusercontent.com/bharathsrid/aws-sagemaker/main/auto-stop-idle/autostop.py
