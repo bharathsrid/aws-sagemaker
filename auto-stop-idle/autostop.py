@@ -43,7 +43,7 @@ idle = True
 port = '8443'
 ignore_connections = False
 try:
-    opts, args = getopt.getopt(sys.argv[1:], "ht:p:c", ["help","time=","port=","ignore-connections"])
+    opts, args = getopt.getopt(sys.argv[1:], "htl:p:c", ["help","time=","LRPath=","port=","ignore-connections"])
     if len(opts) == 0:
         raise getopt.GetoptError("No input parameters!")
     for opt, arg in opts:
@@ -74,7 +74,7 @@ if missingConfiguration:
 def is_idle(last_activity):
     last_activity = datetime.strptime(last_activity,"%Y-%m-%dT%H:%M:%S.%fz")
     if ((datetime.now() - last_activity).total_seconds() > time) and (not os.path.exists(LRPath)):
-        print('Notebook is idle. Last activity time = ', last_activity)
+        print('No Long running file. Notebook is idle. Last activity time = ', last_activity)
         return True
     else:
         print('Notebook is not idle. Last activity time = ', last_activity)
